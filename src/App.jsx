@@ -5,7 +5,7 @@ import './styles/main.scss';
 function App() {
   return (
     <div >
-      Hello Chat app !!
+      Hello Chat app !! welcome
     </div>
   );
 }

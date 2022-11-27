@@ -1,6 +1,6 @@
 import React from "react";
 import { Switch } from "react-router";
-import 'rsuite/dist/rsuite.min.css';
+import 'rsuite/dist/styles/rsuite-default.css';
 import Home from "./pages/Home";
 import SignIn from "./pages/SignIn";
 import './styles/main.scss';
@@ -10,17 +10,18 @@ import PublicRoute from "./components/PublicRoute";
 function App() {
   return (
     <div >
-     <Switch>
 
-      <PublicRoute path="/signin" >
-        <SignIn />
-      </PublicRoute>
+      <Switch>
 
-      <PrivateRoute>
-        <Home />
-      </PrivateRoute>
+        <PublicRoute path="/signin" >
+          <SignIn />
+        </PublicRoute>
 
-     </Switch>
+        <PrivateRoute>
+          <Home />
+        </PrivateRoute>
+
+      </Switch>
     </div>
   );
 }

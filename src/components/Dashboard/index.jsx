@@ -3,6 +3,8 @@ import { Drawer, Button, Divider, Alert } from 'rsuite'
 import { useProfile } from '../../context/Profile.context';
 import EditableInput from './EditableInput';
 import { database } from '../../misc/Firebase';
+import AvatarUploadBtn from './AvatarUploadBtn';
+
 
 
 const Dashboard = ({OnSignOut}) => {
@@ -35,9 +37,8 @@ const Dashboard = ({OnSignOut}) => {
             initialValue={profile.name}
             onSave={onSave}
             label={<h3 className="mb-2">Nickname</h3>}
-
-
             />
+            <AvatarUploadBtn />
         </Drawer.Body>
 
         <Drawer.Footer>
@@ -48,5 +49,6 @@ const Dashboard = ({OnSignOut}) => {
         </>
     )
 }
+// react-avatar-editor@11.0.7
 
 export default Dashboard

@@ -35,10 +35,7 @@ useEffect(()=>{
             setProfile(null);
             setIsLoading(false);
         }
-        // if(IsLoading){
-        //     // eslint-disable-next-line no-console
-        //     console.log('.')
-        // }
+        
     })
 return ()=>{
     authUnSub();

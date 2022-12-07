@@ -1,12 +1,20 @@
 {
   "rules": {
-    "profile": {
+    "profile":{
       "$user_id": {
-        ".read": "$user_id === auth.uid",
-        ".write": "$user_id === auth.uid"
+        ".read" :"$user_id === auth.uid",
+        ".write":"$user_id === auth.uid"
       }
     },
-    ".read": true,
-    ".write": true
+      "rooms":{
+        ".read": "auth !== null",
+        ".write" : "auth !== null",
+      "$room_id": {
+         ".read": "auth !== null",
+        ".write" : "auth !== null"
+      }
+    },
+    ".read": false,
+    ".write": false
   }
 }
